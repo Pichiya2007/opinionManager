@@ -4,12 +4,12 @@ const UserSchema = Schema({
     name: {
         type: String,
         required: [true, 'Name in required.'],
-        maxLengt: [25, 'Cant be overcome 25 characters.']
+        maxLength: [25, 'Cant be overcome 25 characters.']
     },
     surname: {
         type: String,
         required: [true, 'Surname in required.'],
-        maxLengt: [25, 'Cant be overcome 25 characters.']
+        maxLength: [25, 'Cant be overcome 25 characters.']
     },
     username: {
         type: String,
@@ -24,6 +24,11 @@ const UserSchema = Schema({
         type: String,
         required: [true, 'Password is required.'],
         minLength: 8
+    },
+    role: {
+        type: String,
+        enum: ['USER_ROLE', 'ADMIN_ROLE'],
+        default: 'USER_ROLE'
     },
     estado: {
         type: Boolean,

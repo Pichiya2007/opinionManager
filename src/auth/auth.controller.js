@@ -64,7 +64,7 @@ export const updatePassword = async (req, res) => {
         if (!user) {
             return res.status(404).json({
                 msg: 'Usuario no encontrado'
-            });
+            })
         }
 
         // Verifica si la contraseña actual es correcta
@@ -72,7 +72,7 @@ export const updatePassword = async (req, res) => {
         if (!validPassword) {
             return res.status(400).json({
                 msg: 'La contraseña actual es incorrecta'
-            });
+            })
         }
 
         // Encripta la nueva contraseña
@@ -85,18 +85,16 @@ export const updatePassword = async (req, res) => {
         // Responde con un mensaje de éxito
         return res.status(200).json({
             msg: 'Contraseña actualizada exitosamente'
-        });
+        })
 
     } catch (error) {
         console.log(error);
-
-        // Si ocurre un error, responde con un mensaje de error
         return res.status(500).json({
             msg: 'Error al actualizar la contraseña',
             error
-        });
+        })
     }
-};
+}
 
 export const register = async (req, res) => {
     try {
@@ -112,6 +110,7 @@ export const register = async (req, res) => {
             email: data.email,
             phone: data.phone,
             password: encryptedPassword,
+            role: data.role
         })
 
         return res.status(201).json({
@@ -119,16 +118,13 @@ export const register = async (req, res) => {
             userDetails: {
                 user: user.email
             }
-        });
+        })
 
     } catch (error) {
-        
         console.log(error);
-
         return res.status(500).json({
             message: 'User registration failed',
             error
         })
-
     }
 }
