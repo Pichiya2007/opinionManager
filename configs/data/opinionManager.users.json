@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "67bbc1814001fb252785ef0b"
+  },
+  "name": "Luis Pichiyá",
+  "surname": "Sisimit Sisimit",
+  "username": "Pichiyá",
+  "email": "lpichiya@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$0qyTZtOonfN7ksmnP8umaA$UihB6MuM2SWJOXp/C5iGBxAlw+u1tIH8apA65wdGZn0",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-24T00:46:57.970Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-24T01:25:25.428Z"
+  }
+}]
