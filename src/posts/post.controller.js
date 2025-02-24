@@ -1,4 +1,3 @@
-import { response } from 'express';
 import User from '../users/user.model.js';
 import Post from './post.model.js'
 
@@ -52,7 +51,7 @@ export const getPosts = async (req, res) => {
             .skip(Number(desde))
             .limit(Number(limite));
 
-        const PostsWithUsers = await Promise.all(posts.map(async (post) => {
+        const postsWithUsers = await Promise.all(posts.map(async (post) => {
             const user = await User.findById(post.author);
             return {
                 ...post.toObject(),
@@ -65,7 +64,7 @@ export const getPosts = async (req, res) => {
         res.status(200).json({
             success: true,
             total,
-            posts: PostsWithUsers
+            posts: postsWithUsers
         })
 
     } catch (error) {

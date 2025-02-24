@@ -1,0 +1,108 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "User",
+    "collectionId": "800d872b-36b4-4ad5-b68e-8422318e9fdf",
+    "dateExported": "2025-02-24T09:59:22.743Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d4a273d3-81ee-4258-bc0b-d12e9cb33792",
+            "colId": "800d872b-36b4-4ad5-b68e-8422318e9fdf",
+            "containerId": "",
+            "name": "Register",
+            "url": "http://localhost:3005/opinionManager/v1/auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-24T09:56:43.911Z",
+            "modified": "2025-02-24T09:56:43.911Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Derian\",\n  \"surname\": \"Hernández\",\n  \"username\": \"Pusaka\",\n  \"email\": \"pusaka@gmail.com\",\n  \"password\": \"12345678\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "2f619e30-54c1-498d-b16f-60d1a8326e1d",
+            "colId": "800d872b-36b4-4ad5-b68e-8422318e9fdf",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost:3005/opinionManager/v1/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-02-24T09:56:57.716Z",
+            "modified": "2025-02-24T09:56:57.716Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"Pichiyá\",\n  \"password\": \"12345678\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "feec7146-c4e5-46c2-9024-f21cf570188e",
+            "colId": "800d872b-36b4-4ad5-b68e-8422318e9fdf",
+            "containerId": "",
+            "name": "updatePassword",
+            "url": "http://localhost:3005/opinionManager/v1/auth/updatepassword",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2025-02-24T09:57:21.125Z",
+            "modified": "2025-02-24T09:57:21.125Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"lpichiya@gmail.com\",\n  \"oldPassword\": \"elmergod\",\n  \"newPassword\": \"12345678\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "aa8313db-13f6-4e35-bdfa-a61be7479fd7",
+            "colId": "800d872b-36b4-4ad5-b68e-8422318e9fdf",
+            "containerId": "",
+            "name": "getUsers",
+            "url": "http://localhost:3005/opinionManager/v1/users",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2025-02-24T09:57:47.605Z",
+            "modified": "2025-02-24T09:57:47.605Z",
+            "headers": []
+        },
+        {
+            "_id": "fc1fb246-f934-45ec-9e2e-5c4cb7ff9a7c",
+            "colId": "800d872b-36b4-4ad5-b68e-8422318e9fdf",
+            "containerId": "",
+            "name": "searchUser",
+            "url": "http://localhost:3005/opinionManager/v1/users/findUser/67bbc1814001fb252785ef0b",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2025-02-24T09:58:03.549Z",
+            "modified": "2025-02-24T09:58:03.549Z",
+            "headers": []
+        },
+        {
+            "_id": "640cd81b-4a56-4688-9cb5-a64ce7345730",
+            "colId": "800d872b-36b4-4ad5-b68e-8422318e9fdf",
+            "containerId": "",
+            "name": "updateUser",
+            "url": "http://localhost:3005/opinionManager/v1/users/67bbc1814001fb252785ef0b",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2025-02-24T09:58:42.229Z",
+            "modified": "2025-02-24T09:58:42.229Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiYzE4MTQwMDFmYjI1Mjc4NWVmMGIiLCJpYXQiOjE3NDAzNjAzMTEsImV4cCI6MTc0MDM2MzkxMX0.a2x3Jf-_Pxj3-MIws-E7lwLQGuViQp9HJ5kQvErrzUY"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Luis Pichiyá\",\n  \"surname\": \"Sisimit Sisimit\",\n  \"username\": \"Pichiyá\",\n  \"email\": \"lpichiya@gmail.com\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "tz0Fo-TZe774l6kuk9kHKdNmSEA2yWckv22GKOBoPcreFvzz57npRmsw8q6882ENI93QCwKKgZD46X2qTTGooQ"
+}
