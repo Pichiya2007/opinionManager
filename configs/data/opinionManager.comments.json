@@ -35,4 +35,23 @@
   "updatedAt": {
     "$date": "2025-02-24T09:53:14.856Z"
   }
+},
+{
+  "_id": {
+    "$oid": "67bcd4e544e007cb68962c3d"
+  },
+  "content": "Comentario de prueba.",
+  "author": {
+    "$oid": "67bbc1814001fb252785ef0b"
+  },
+  "post": {
+    "$oid": "67bc0b1f95bf57a7b00cc290"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-24T20:21:57.446Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-24T20:21:57.446Z"
+  }
 }]
