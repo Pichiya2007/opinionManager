@@ -14,4 +14,38 @@
   "updatedAt": {
     "$date": "2025-02-24T01:25:25.428Z"
   }
+},
+{
+  "_id": {
+    "$oid": "67bc045c95bf57a7b00cc260"
+  },
+  "name": "Apen",
+  "surname": "Solis",
+  "username": "Papen",
+  "email": "apen@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$QYVYiQqUogfChVMQZAt8Gw$fMeQIzQvxi6kkGP/n6Fm8lkXjRu48j6/szvFg+vWnEE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-24T05:32:12.184Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-24T05:32:12.184Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bc046f95bf57a7b00cc263"
+  },
+  "name": "Derian",
+  "surname": "Hernández",
+  "username": "Pusaka",
+  "email": "pusaka@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$wyL+QGCCHdfNW9QyfOay1A$MzYHsy1Nb1nOSBD9sPWZH1ZOmLoWlo/uuVrdDif/QVM",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-24T05:32:31.994Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-24T05:32:31.994Z"
+  }
 }]
