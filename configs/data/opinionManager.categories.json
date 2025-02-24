@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "67bcf54cd7658527a261fc2d"
+  },
+  "name": "Noticia",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-24T22:40:12.403Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-24T23:26:37.952Z"
+  }
+}]

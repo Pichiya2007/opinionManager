@@ -26,3 +26,25 @@ export const addCategory = async (req, res) => {
         })
     }
 }
+
+export const updateCategory = async (req, res) => {
+    try {
+        
+        const { id } = req.params;
+        const { _id, ...data } = req.body;
+
+        const category = await Category.findByIdAndUpdate(id, data, { new: true });
+
+        res.status(200).json({
+            success: true,
+            msg: 'Categoría actualizada con exito.'
+        })
+
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: 'La categoría no se pudo editar.',
+            error: error.message
+        })
+    }
+}
