@@ -12,8 +12,9 @@ const PostSchema = Schema({
         maxLengt: [500, 'Cant be overcome 500 characters.']
     },
     category: {
-        type: String,
-        required: [true, 'Category is required.']
+        type: Schema.Types.ObjectId,
+        ref: 'Category',
+        required: true
     },
     author: {
         type: Schema.Types.ObjectId,

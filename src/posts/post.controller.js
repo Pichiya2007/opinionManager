@@ -1,11 +1,13 @@
 import User from '../users/user.model.js';
-import Post from './post.model.js'
+import Category from '../category/category.model.js'
+import Post from './post.model.js';
 
 export const addPost = async (req, res) => {
     try {
         
         const data = req.body;
         const user = await User.findById(req.usuario._id);
+        const category = await Category.findById(data.category);
 
         if (!user) {
             return res.status(404).json({
@@ -17,7 +19,7 @@ export const addPost = async (req, res) => {
         const post = new Post({
             title: data.title,
             content: data.content,
-            category: data.category,
+            category: category._id,
             author: user._id,
             status: true
         });
@@ -53,9 +55,11 @@ export const getPosts = async (req, res) => {
 
         const postsWithUsers = await Promise.all(posts.map(async (post) => {
             const user = await User.findById(post.author);
+            const postCategory = await Category.findById(post.category);
             return {
                 ...post.toObject(),
-                author: user ? user.name : 'Usuario no encontrado.' //Si el usuario no existe, se muestra el mensaje de usuario no encontrado, sino se muestra el nombre del usuario que creó el post
+                author: user ? user.name : 'Usuario no encontrado.', //Si el usuario no existe, se muestra el mensaje de usuario no encontrado, sino se muestra el nombre del usuario que creó el post
+                category: postCategory ? postCategory.name : 'Categoría no encontrada.' //Si la categoría no existe, se muestra el mensaje de categoría no encontrada, sino se muestra el nombre de la categoría del post
             }
         }));
 
@@ -91,13 +95,15 @@ export const searchPost = async (req, res) => {
             })
         }
 
-        const author = await User.findById(post.author)
+        const author = await User.findById(post.author);
+        const category = await Category.findById(post.category);
 
         res.status(200).json({
             success: true,
             post: {
                 ...post.toObject(),
-                author: author ? author.name : 'Usuario no encontrado.'
+                author: author ? author.name : 'Usuario no encontrado.',
+                category: category ? category.name : 'Categoría no encontrada.'
             }
         })
 

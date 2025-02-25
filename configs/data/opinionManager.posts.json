@@ -1,72 +1,40 @@
 [{
   "_id": {
-    "$oid": "67bbd98a24b9d0721128fdb0"
+    "$oid": "67bd72c521a5fe84c79c088d"
   },
-  "title": "Noticias Quiché",
-  "content": "Accidente en quiché deja muerto a joven llamado Derian",
-  "category": "Noticia",
+  "title": "VALORANT",
+  "content": "VALORANT SALIO X AÑOS ASDKASFGEQFAS",
+  "category": {
+    "$oid": "67bd63ec94304338147cbf2c"
+  },
   "author": {
-    "$oid": "67bbc1814001fb252785ef0b"
+    "$oid": "67bd658235bcc1a9b48391a5"
   },
   "status": true,
   "createdAt": {
-    "$date": "2025-02-24T02:29:30.468Z"
+    "$date": "2025-02-25T07:35:33.944Z"
   },
   "updatedAt": {
-    "$date": "2025-02-24T05:56:07.002Z"
+    "$date": "2025-02-25T07:35:33.944Z"
   }
 },
 {
   "_id": {
-    "$oid": "67bc0a1795bf57a7b00cc27d"
+    "$oid": "67bd75341c1e9ae108d3d198"
   },
-  "title": "Lol el Peor",
-  "content": "Para mi el lol es lo peor que ha existido en el mundo, ojalá lo eliminenxd",
-  "category": "Inteligente",
+  "title": "VALORANT",
+  "content": "PRUEBA EDITAR",
+  "category": {
+    "$oid": "67bd82c4e8af0b861a9fcc1f"
+  },
   "author": {
-    "$oid": "67bbc1814001fb252785ef0b"
+    "$oid": "67bd658235bcc1a9b48391a5"
   },
   "status": true,
   "createdAt": {
-    "$date": "2025-02-24T05:56:39.097Z"
+    "$date": "2025-02-25T07:45:56.401Z"
   },
   "updatedAt": {
-    "$date": "2025-02-24T06:46:53.566Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "67bc0a4795bf57a7b00cc284"
-  },
-  "title": "Lol el mejor",
-  "content": "Para mi el lol es el mejor juego del mundo no se que digan ustedes",
-  "category": "Pendejos",
-  "author": {
-    "$oid": "67bc045c95bf57a7b00cc260"
-  },
-  "status": true,
-  "createdAt": {
-    "$date": "2025-02-24T05:57:27.373Z"
-  },
-  "updatedAt": {
-    "$date": "2025-02-24T05:57:27.373Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "67bc0b1f95bf57a7b00cc290"
-  },
-  "title": "Valorant el mejor shooter que ha existido",
-  "content": "El mejor shooter con mejor aim, habilidades y jugabilidad para todos",
-  "category": "Inteligentes",
-  "author": {
-    "$oid": "67bbc1814001fb252785ef0b"
-  },
-  "status": true,
-  "createdAt": {
-    "$date": "2025-02-24T06:01:03.511Z"
-  },
-  "updatedAt": {
-    "$date": "2025-02-24T06:01:03.511Z"
+    "$date": "2025-02-25T09:01:58.823Z"
   }
 }]

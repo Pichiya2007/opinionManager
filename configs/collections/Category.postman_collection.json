@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "2a8d42d2-dd44-4d9c-8d61-5f18a3e62f42",
+		"name": "Category",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37540016"
+	},
+	"item": [
+		{
+			"name": "addCategory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkNjU4MjM1YmNjMWE5YjQ4MzkxYTUiLCJpYXQiOjE3NDA0NzI4ODAsImV4cCI6MTc0MDQ3NjQ4MH0.HSm6MxIq8ztJYlm8mf9XgW1gYQUu0zWGcJbnIt1uTfU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Deporte\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3005/opinionManager/v1/categories"
+			},
+			"response": []
+		},
+		{
+			"name": "updateCategory",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkNWYyNzY0YTUzZDIzM2ZmNmU4YTkiLCJpYXQiOjE3NDA0NzMwMDQsImV4cCI6MTc0MDQ3NjYwNH0.GUrTyws7eEikw_yY8ekyNmo8lWQ0qDjPEaia59K9ZdA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Cine\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/opinionManager/v1/categories/67bd8340e8af0b861a9fcc2a?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"opinionManager",
+						"v1",
+						"categories",
+						"67bd8340e8af0b861a9fcc2a"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategory",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

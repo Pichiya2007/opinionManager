@@ -83,7 +83,7 @@ export const updateUser = async (req, res = response) => {
     }
 }
 
-export const deleteUser = async (req, res) => {
+/*export const deleteUser = async (req, res) => {
     try {
         
         const { id } = req.params;
@@ -103,5 +103,37 @@ export const deleteUser = async (req, res) => {
             msg: 'Error al desactivar usuario',
             error
         })
+    }
+}*/
+
+export const defaultAdmin = async () => {
+
+    try {
+        
+        const defaultAdmin = {
+            name: "Luis Pichiyá",
+            surname: "Luis Pichiyá",
+            username: "Pichiyá",
+            email: "admin@gmail.com",
+            password: "12345678",
+            role: "ADMIN_ROLE",
+            estado: true
+        }
+    
+        const adminExists = await User.findOne({ email: defaultAdmin.email }); // Verifica si el administrador ya existe
+    
+        if (adminExists) {
+            return console.log('El administrador por defecto ya existe.');
+        }
+    
+        defaultAdmin.password = await hash(defaultAdmin.password); 
+    
+        const user = new User(defaultAdmin);
+        await user.save();
+    
+        console.log('Administrador por defecto creado con éxito.');
+
+    } catch (error) {
+        console.log('Error al crear el administrador por defecto.', error.message);
     }
 }

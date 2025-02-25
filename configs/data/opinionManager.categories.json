@@ -1,13 +1,39 @@
 [{
   "_id": {
-    "$oid": "67bcf54cd7658527a261fc2d"
+    "$oid": "67bd63ec94304338147cbf2c"
   },
-  "name": "Noticia",
+  "name": "General",
   "status": true,
   "createdAt": {
-    "$date": "2025-02-24T22:40:12.403Z"
+    "$date": "2025-02-25T06:32:12.393Z"
   },
   "updatedAt": {
-    "$date": "2025-02-24T23:26:37.952Z"
+    "$date": "2025-02-25T06:32:12.393Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bd82c4e8af0b861a9fcc1f"
+  },
+  "name": "Deporte",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-25T08:43:48.868Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-25T08:45:48.715Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bd8340e8af0b861a9fcc2a"
+  },
+  "name": "Cine",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-25T08:45:52.645Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-25T08:46:20.155Z"
   }
 }]

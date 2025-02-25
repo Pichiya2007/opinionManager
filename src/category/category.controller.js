@@ -48,3 +48,76 @@ export const updateCategory = async (req, res) => {
         })
     }
 }
+
+export const getCategories = async (req, res) => {
+    try {
+        
+        const { limite = 10, desde = 0 } = req.query;
+        const query = { status: true };
+
+        const [total, categories] = await Promise.all([
+            Category.countDocuments(query),
+            Category.find(query)
+                .skip(Number(desde))
+                .limit(Number(limite))
+        ])
+
+        res.status(200).json({
+            success: true,
+            total,
+            categories
+        })
+        
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: 'Error al obtener las categorías.',
+            error: error.message
+        })
+    }
+}
+
+export const deleteCategory = async (req, res) => {
+    try {
+        
+        const { id } = req.params;
+        const category = await Category.findByIdAndUpdate(id, { status: false }, { new: true });
+
+        res.status(200).json({
+            success: true,
+            msg: 'Categoría eli.',
+            category
+        })
+
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: 'Error al eliminar la categoría.',
+            error: error.message
+        })
+    }
+}
+
+export const defaultCategory = async () => {
+    try {
+        
+        const defaultCategory = {
+            name: 'General',
+            status: true
+        }   
+
+        const categoryExists = await Category.findOne({ name: defaultCategory.name });
+
+        if (categoryExists) {
+            return console.log('La categoría por defecto ya existe.');
+        }
+
+        const category = new Category(defaultCategory);
+        await category.save();
+
+        console.log('Categoría por defecto creada con éxito.');
+
+    } catch (error) {
+        console.log('Error al crear la categoría por defecto.', error.message);
+    }
+}

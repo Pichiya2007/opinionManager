@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "c00dfe35-29c6-4a4f-a9a9-7d7e66039480",
+		"name": "Post",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37540016"
+	},
+	"item": [
+		{
+			"name": "addPost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkNjU4MjM1YmNjMWE5YjQ4MzkxYTUiLCJpYXQiOjE3NDA0Njg2ODQsImV4cCI6MTc0MDQ3MjI4NH0.DWJmFOeGtngTlRXfHSNkEAZPEM9InwQlmuhrBMJ2RwI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"VALORANT\",\r\n    \"content\": \"VALORANT SALIO X AÑOS ASDKASFGEQFAS\",\r\n    \"category\": \"67bd63ec94304338147cbf2c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3005/opinionManager/v1/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "deletePost",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3005/opinionManager/v1/posts/67bbd98a24b9d0721128fdb0"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkNjU4MjM1YmNjMWE5YjQ4MzkxYTUiLCJpYXQiOjE3NDA0NzM4MTYsImV4cCI6MTc0MDQ3NzQxNn0.Q5XLJIuU0mVvBCaZBS3LYaYydU-71yGL7i5TGUDWsPs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"VALORANT\",\r\n    \"content\": \"PRUEBA EDITAR\",\r\n    \"category\": \"67bd82c4e8af0b861a9fcc1f\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3005/opinionManager/v1/posts/67bd75341c1e9ae108d3d198"
+			},
+			"response": []
+		},
+		{
+			"name": "getPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/opinionManager/v1/posts/?desde=0&limite=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"opinionManager",
+						"v1",
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "desde",
+							"value": "0"
+						},
+						{
+							"key": "limite",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3005/opinionManager/v1/posts/67bd72c521a5fe84c79c088d"
+			},
+			"response": []
+		}
+	]
+}
