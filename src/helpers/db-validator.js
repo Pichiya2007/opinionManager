@@ -5,6 +5,10 @@ export const esRoleValido = async (role = '') => {
 
     if (role === '') {
         return 'USER_ROLE'
+    } 
+    
+    if (role === 'ADMIN_ROLE') {
+        throw new Error('No se puede crear un usuario con rol de administrador.')
     }
 
     const existeRol = await Role.findOne({ role });
