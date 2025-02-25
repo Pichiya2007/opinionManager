@@ -31,7 +31,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"apen@gmail.com\",\r\n    \"password\": \"elmergod\"\r\n}",
+					"raw": "{\r\n    \"username\": \"Pichiyá\",\r\n    \"password\": \"12345678\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

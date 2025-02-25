@@ -25,7 +25,7 @@
   "title": "VALORANT",
   "content": "PRUEBA EDITAR",
   "category": {
-    "$oid": "67bd82c4e8af0b861a9fcc1f"
+    "$oid": "67bd63ec94304338147cbf2c"
   },
   "author": {
     "$oid": "67bd658235bcc1a9b48391a5"
@@ -35,6 +35,6 @@
     "$date": "2025-02-25T07:45:56.401Z"
   },
   "updatedAt": {
-    "$date": "2025-02-25T09:01:58.823Z"
+    "$date": "2025-02-25T09:33:53.210Z"
   }
 }]

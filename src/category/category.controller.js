@@ -1,4 +1,5 @@
-import Category from './category.model.js'
+import Category from './category.model.js';
+import Post from '../posts/post.model.js';
 
 export const addCategory = async (req, res) => {
     try {
@@ -81,11 +82,23 @@ export const deleteCategory = async (req, res) => {
     try {
         
         const { id } = req.params;
+
+        const defaultCategory = await Category.findOne({ name: 'General' }); // Encuentra la categoría por defecto
+
+        if (!defaultCategory) {
+            return res.status(404).json({
+                success: false,
+                msg: 'No se encontró la categoría por defecto.'
+            })
+        }
+
+        await Post.updateMany({ category: id }, { category: defaultCategory._id }); // Actualiza los posts con la categoría eliminada por la de defecto
+
         const category = await Category.findByIdAndUpdate(id, { status: false }, { new: true });
 
         res.status(200).json({
             success: true,
-            msg: 'Categoría eli.',
+            msg: 'Categoría eliminada con exito.',
             category
         })
 

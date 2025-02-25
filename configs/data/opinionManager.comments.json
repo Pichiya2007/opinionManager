@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "67bd93148f075091cb2dafdd"
+  },
+  "content": "AMIGO EL VALORANT SALIO EN X AÑO, VALORANT >> LOL",
+  "author": {
+    "$oid": "67bd669035bcc1a9b48391af"
+  },
+  "post": {
+    "$oid": "67bd72c521a5fe84c79c088d"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-25T09:53:24.576Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-25T09:53:24.576Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bd933e8f075091cb2dafe6"
+  },
+  "content": "Actualizar comentario, prueba",
+  "author": {
+    "$oid": "67bd669035bcc1a9b48391af"
+  },
+  "post": {
+    "$oid": "67bd72c521a5fe84c79c088d"
+  },
+  "status": false,
+  "createdAt": {
+    "$date": "2025-02-25T09:54:06.274Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-25T10:04:09.698Z"
+  }
+}]

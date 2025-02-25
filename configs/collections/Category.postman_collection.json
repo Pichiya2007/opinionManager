@@ -13,7 +13,7 @@
 				"header": [
 					{
 						"key": "x-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkNjU4MjM1YmNjMWE5YjQ4MzkxYTUiLCJpYXQiOjE3NDA0NzI4ODAsImV4cCI6MTc0MDQ3NjQ4MH0.HSm6MxIq8ztJYlm8mf9XgW1gYQUu0zWGcJbnIt1uTfU",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkNWYyNzY0YTUzZDIzM2ZmNmU4YTkiLCJpYXQiOjE3NDA0NzMwMDQsImV4cCI6MTc0MDQ3NjYwNH0.GUrTyws7eEikw_yY8ekyNmo8lWQ0qDjPEaia59K9ZdA",
 						"type": "text"
 					}
 				],
@@ -26,7 +26,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:3005/opinionManager/v1/categories"
+				"url": "http://localhost:3005/opinionManager/v1/categories/"
 			},
 			"response": []
 		},
@@ -74,10 +74,48 @@
 			"response": []
 		},
 		{
+			"name": "deleteCategory",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkNWYyNzY0YTUzZDIzM2ZmNmU4YTkiLCJpYXQiOjE3NDA0NzU0NzYsImV4cCI6MTc0MDQ3OTA3Nn0.kiFhTsBOM8NisvQBdhBeS0DYQca9D9t5GcaEB8pucSk",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3005/opinionManager/v1/categories/67bd82c4e8af0b861a9fcc1f"
+			},
+			"response": []
+		},
+		{
 			"name": "getCategory",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/opinionManager/v1/categories?limite=10&desde=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"opinionManager",
+						"v1",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "limite",
+							"value": "10"
+						},
+						{
+							"key": "desde",
+							"value": "0"
+						}
+					]
+				}
 			},
 			"response": []
 		}

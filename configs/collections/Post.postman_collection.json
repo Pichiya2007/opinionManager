@@ -31,16 +31,7 @@
 			"response": []
 		},
 		{
-			"name": "deletePost",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": "http://localhost:3005/opinionManager/v1/posts/67bbd98a24b9d0721128fdb0"
-			},
-			"response": []
-		},
-		{
-			"name": "New Request",
+			"name": "updatePost",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -60,6 +51,15 @@
 					}
 				},
 				"url": "http://localhost:3005/opinionManager/v1/posts/67bd75341c1e9ae108d3d198"
+			},
+			"response": []
+		},
+		{
+			"name": "deletePost",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3005/opinionManager/v1/posts/67bbd98a24b9d0721128fdb0"
 			},
 			"response": []
 		},

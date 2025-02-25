@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "e7f18067-17c6-4d57-af50-751190f3072b",
+		"name": "Comment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37540016"
+	},
+	"item": [
+		{
+			"name": "addComment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkNjY5MDM1YmNjMWE5YjQ4MzkxYWYiLCJpYXQiOjE3NDA0NzcxMzAsImV4cCI6MTc0MDQ4MDczMH0.eGDKZhquifjQgGvaCcR783Z3LdfqUyQylbLcylp3DDo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"VALORANT >> LOL\",\r\n    \"post\": \"67bd72c521a5fe84c79c088d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3005/opinionManager/v1/comments"
+			},
+			"response": []
+		},
+		{
+			"name": "getComments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3005/opinionManager/v1/comments"
+			},
+			"response": []
+		},
+		{
+			"name": "updateComment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkNjU4MjM1YmNjMWE5YjQ4MzkxYTUiLCJpYXQiOjE3NDA0Nzc3NjYsImV4cCI6MTc0MDQ4MTM2Nn0.phUZ4udDrGVGSwP6U-OOI0mTFn6Fvx-UaS4YaxfyTlA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": "http://localhost:3005/opinionManager/v1/comments/67bd933e8f075091cb2dafe6"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteComment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkNjY5MDM1YmNjMWE5YjQ4MzkxYWYiLCJpYXQiOjE3NDA0Nzc4MzIsImV4cCI6MTc0MDQ4MTQzMn0.mSNcfU8G3vs8P8e8JbNY80ycMDPhgj4duRLj5WBeDaI",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3005/opinionManager/v1/comments/67bd933e8f075091cb2dafe6"
+			},
+			"response": []
+		}
+	]
+}
