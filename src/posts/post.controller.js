@@ -1,6 +1,7 @@
 import User from '../users/user.model.js';
 import Category from '../category/category.model.js'
 import Post from './post.model.js';
+import Comment from '../comments/comment.model.js'
 
 export const addPost = async (req, res) => {
     try {
@@ -137,6 +138,8 @@ export const deletePost = async (req, res) => {
                 msg: 'No tienes permisos para eliminar este post.'
             })
         }
+
+        await Comment.updateMany({ post: id }, { status: false });
 
         post.status = false;
         await post.save();
